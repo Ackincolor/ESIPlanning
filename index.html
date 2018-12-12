@@ -8,7 +8,13 @@
     <meta name="author" content="">
 
     <title>Emploi du Temps</title>
-
+    <!--ajout jQuery-->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <!-- lecture flux RSS-->
+    <script src="js/fluxReader.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -330,6 +336,7 @@
       function myFunction(xml) {
         var i;
         var xmlDoc = xml.responseXML;
+        console.log(xml);
         alert(xmlDoc);
       }
 
