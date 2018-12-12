@@ -30,7 +30,7 @@ $.ajax({
     //console.log(data);
     data.items.forEach(element => {
         console.log(element);
-        document.getElementById("slideshowContainer").innerHTML+=template.format("FISA blabla", "ici un autre ruc","autre chose","le tritre du cours",element.description.find("p")[0]);
+        document.getElementById("slideshowContainer").innerHTML+=template.format("FISA blabla", "ici un autre ruc","autre chose","le tritre du cours",$(element.description).find("p")[0]);
     });
   }
 });
