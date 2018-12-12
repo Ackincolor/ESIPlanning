@@ -30,7 +30,13 @@ $.ajax({
     //console.log(data);
     data.items.forEach(element => {
         console.log(element);
-        document.getElementById("slideshowContainer").innerHTML+=template.format("FISA blabla", "ici un autre ruc","autre chose","le tritre du cours",$(element.description).find("p")[0]);
+        heure = $(element.description).find("p").prevObject[0].firstChild.textContent;
+        salle = $($(element.description)[2])[0].children[2].nextSibling.textContent;
+        classe = $($(element.description)[2])[0].children[1].nextSibling.textContent;
+        prof = $($(element.description)[2])[0].children[3].nextSibling.textContent;
+        titre = element.title;
+        console.log($($(element.description)[2])[0].children[2].nextSibling.textContent);
+        document.getElementById("slideshowContainer").innerHTML+=template.format(classe, salle,titre,prof,heure);
     });
   }
 });
